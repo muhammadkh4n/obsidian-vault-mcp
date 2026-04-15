@@ -17,7 +17,7 @@ interface Session {
 
 function createMcpServer(vault: VaultBackend): McpServer {
   const mcp = new McpServer(
-    { name: 'obsidian-vault-mcp', version: '0.1.0' },
+    { name: '@freewilling/obsidian-mcp', version: '0.1.0' },
     { capabilities: { tools: {} } },
   );
   registerTools(mcp, vault);
@@ -127,7 +127,7 @@ export async function startHttpServer(
   });
 
   server.listen(port, '0.0.0.0', () => {
-    console.error(`obsidian-vault-mcp HTTP server listening on port ${port}`);
+    console.error(`@freewilling/obsidian-mcp HTTP server listening on port ${port}`);
   });
 
   const shutdown = async () => {

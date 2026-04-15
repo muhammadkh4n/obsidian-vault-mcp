@@ -9,7 +9,7 @@ import { registerTools } from './tools.js';
 
 export async function startStdioServer(vault: VaultBackend): Promise<void> {
   const mcp = new McpServer(
-    { name: 'obsidian-vault-mcp', version: '0.1.0' },
+    { name: '@freewilling/obsidian-mcp', version: '0.1.0' },
     { capabilities: { tools: {} } },
   );
   registerTools(mcp, vault);

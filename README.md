@@ -1,4 +1,4 @@
-# obsidian-vault-mcp
+# @freewilling/obsidian-mcp
 
 MCP server that gives Claude Code (and any MCP client) read/write access to your Obsidian vault. Supports local vault folders and remote CouchDB/LiveSync with end-to-end encryption.
 
@@ -13,7 +13,7 @@ Add to `~/.claude/settings.json`:
   "mcpServers": {
     "obsidian": {
       "command": "npx",
-      "args": ["-y", "obsidian-vault-mcp", "--vault", "~/Documents/MyVault"]
+      "args": ["-y", "@freewilling/obsidian-mcp", "--vault", "~/Documents/MyVault"]
     }
   }
 }
@@ -30,7 +30,7 @@ For remote access to an E2E-encrypted vault via [Obsidian LiveSync](https://gith
   "mcpServers": {
     "obsidian": {
       "command": "npx",
-      "args": ["-y", "obsidian-vault-mcp"],
+      "args": ["-y", "@freewilling/obsidian-mcp"],
       "env": {
         "OBSIDIAN_MCP_COUCHDB_URL": "http://admin:password@localhost:5984",
         "OBSIDIAN_MCP_PASSPHRASE": "your-livesync-e2ee-passphrase"
@@ -57,7 +57,7 @@ For remote access to an E2E-encrypted vault via [Obsidian LiveSync](https://gith
 For remote access (e.g., from a VPS accessible over Tailscale):
 
 ```bash
-npx obsidian-vault-mcp --vault ~/MyVault --http --port 3848 --token mysecret
+npx @freewilling/obsidian-mcp --vault ~/MyVault --http --port 3848 --token mysecret
 ```
 
 Then in Claude Code:

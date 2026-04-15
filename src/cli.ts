@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * obsidian-vault-mcp CLI
+ * @freewilling/obsidian-mcp CLI
  *
  * Usage:
- *   npx obsidian-vault-mcp --vault ~/Documents/MyVault
- *   npx obsidian-vault-mcp --couchdb http://admin:pass@localhost:5984 --passphrase "..."
- *   npx obsidian-vault-mcp --vault ~/MyVault --http --port 3848 --token secret
+ *   npx @freewilling/obsidian-mcp --vault ~/Documents/MyVault
+ *   npx @freewilling/obsidian-mcp --couchdb http://admin:pass@localhost:5984 --passphrase "..."
+ *   npx @freewilling/obsidian-mcp --vault ~/MyVault --http --port 3848 --token secret
  */
 
 import { LocalVault } from './backends/filesystem.js';
@@ -29,12 +29,12 @@ function env(key: string): string | undefined {
 }
 
 const HELP = `
-obsidian-vault-mcp — Give Claude Code read/write access to your Obsidian vault
+@freewilling/obsidian-mcp — Give Claude Code read/write access to your Obsidian vault
 
 USAGE:
-  npx obsidian-vault-mcp --vault <path>                    Local vault (stdio)
-  npx obsidian-vault-mcp --couchdb <url> --passphrase ...  CouchDB/LiveSync (stdio)
-  npx obsidian-vault-mcp --vault <path> --http             HTTP transport
+  npx @freewilling/obsidian-mcp --vault <path>                    Local vault (stdio)
+  npx @freewilling/obsidian-mcp --couchdb <url> --passphrase ...  CouchDB/LiveSync (stdio)
+  npx @freewilling/obsidian-mcp --vault <path> --http             HTTP transport
 
 OPTIONS:
   --vault <path>        Path to local Obsidian vault folder
