@@ -1,0 +1,44 @@
+{
+  "name": "obsidian-vault-mcp",
+  "version": "0.1.0",
+  "description": "MCP server giving Claude Code encrypted read/write access to Obsidian vaults — local files or CouchDB LiveSync with E2EE",
+  "type": "module",
+  "bin": {
+    "obsidian-vault-mcp": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/vault.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "obsidian",
+    "mcp",
+    "claude",
+    "vault",
+    "livesync",
+    "couchdb",
+    "e2ee",
+    "model-context-protocol"
+  ],
+  "author": "Muhammad Khan",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
